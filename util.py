@@ -1,5 +1,7 @@
 import cv2 
 import time
+import matplotlib.pyplot as plt
+import numpy as np
 
 def get_coordinates_interactive(path: str) -> tuple[int,int,int,int]:
     """
@@ -126,4 +128,11 @@ def get_xywh_from_refpts(refpts: list) -> tuple[int,int,int,int]:
     return x,y,w,h
 
     
-
+def plot_imgs(img1:np.ndarray, img2:np.ndarray):
+    plt.figure(figsize=(12,6))
+    plt.subplot(121),plt.imshow(img1,cmap = 'gray')
+    plt.title('Original Image'), plt.xticks([]), plt.yticks([])
+    plt.subplot(122),plt.imshow(img2,cmap = 'gray')
+    plt.title('Preprocessed Image'), plt.xticks([]), plt.yticks([])
+    
+    plt.show()
