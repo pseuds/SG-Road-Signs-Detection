@@ -1,0 +1,26 @@
+Ultralytics 8.3.37 🚀 Python-3.12.7 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 4080 SUPER, 16072MiB)
+Model summary (fused): 168 layers, 11,133,711 parameters, 0 gradients, 28.5 GFLOPs
+                   all         47         79      0.701      0.692      0.822      0.608
+                   ERP          3          3          1      0.829      0.995      0.832
+              GIVE_WAY          3          3      0.753      0.667      0.677      0.577
+   MANDATORY_KEEP_LEFT          8          8      0.686       0.55      0.691        0.5
+   MANDATORY_SPLIT_WAY         11         11      0.843      0.978      0.931      0.668
+              NO_ENTRY          4          5       0.93        0.8      0.838      0.549
+          NO_LEFT_TURN          1          1      0.281          1      0.995      0.895
+         NO_RIGHT_TURN          3          3      0.399      0.266       0.48      0.303
+           NO_STOPPING          2          2      0.622        0.5      0.695      0.497
+            NO_WAITING          1          1      0.346          1      0.995      0.697
+  PEDESTARIAN_CROSSING          4          4      0.812       0.75      0.945      0.648
+PROHIBITORY_NO_JAYWALKING          6          6       0.48        0.5      0.486      0.375
+ PROHIBITORY_SPD_LIMIT          3          3      0.796          1      0.995      0.853
+PROHIB_NO_VEH_OVER_HEIGHT_45          2          3      0.558          1      0.995       0.72
+      REDUCE_SPEED_NOW          1          1          1          0      0.995      0.796
+                  SLOW          3          4      0.728      0.685      0.773      0.533
+                  STOP          5          5      0.805        0.6      0.737      0.529
+            TURN_ARROW          5          5      0.579      0.559      0.625      0.466
+                U_TURN          4          4      0.877       0.75      0.888      0.587
+         WARNING_CURVE          4          7      0.823      0.714      0.878       0.53
+Speed: 2.4ms preprocess, 3.0ms inference, 0.0ms loss, 2.0ms postprocess per image
+Results saved to [1mruns/detect/val3[0m
+💡 Learn more at https://docs.ultralytics.com/modes/val
+[34m[1mVS Code:[0m view Ultralytics VS Code Extension ⚡ at https://docs.ultralytics.com/integrations/vscode
