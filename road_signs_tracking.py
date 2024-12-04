@@ -48,8 +48,9 @@ def get_best_matching_obj(current_obj, frame, past_objs, exclude_ids=[]) -> int 
                                    id: 0, 
                                    roi_hist: get_roi_hist(),
                                    frame_no: last frame no,
+                                }
     exclude_ids : list
-        Will not consider objects with listed ids as a matching object.                           }
+        Will not consider objects with listed ids as a matching object.
 
     Returns
     -------
@@ -184,7 +185,6 @@ if __name__ == "__main__":
 
     obj_count = 0       # to help assign id
     frame_count = 0     # keep track of time
-    prev_frame_ids = []
 
     model = YOLO("best.pt")
     fourcc = cv2.VideoWriter_fourcc(*'MJPG') 
@@ -271,8 +271,6 @@ if __name__ == "__main__":
                     current_frame_ids.append(obj_count)
                     obj_count += 1
                 
-            prev_frame_ids = current_frame_ids
-
             # write and save video
             writer.write(frame)
             cv2.imshow("Tracking", frame)
