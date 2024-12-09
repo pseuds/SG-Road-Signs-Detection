@@ -12,6 +12,7 @@ Idea: see if any new prediction is similar to those found. If so, assign same id
 def parseargs():
     parser = argparse.ArgumentParser(description='Meanshift Tracking')
     parser.add_argument('-v', '--video', type=str, required=True, help='Path to video file.')
+    parser.add_argument('-m', '--model', type=str, required=True, help='Path to model file (.pt or .pth format).')
     args = parser.parse_args()
     return args
 
@@ -186,7 +187,7 @@ if __name__ == "__main__":
     obj_count = 0       # to help assign id
     frame_count = 0     # keep track of time
 
-    model = YOLO("best.pt")
+    model = YOLO(args.model)
     fourcc = cv2.VideoWriter_fourcc(*'MJPG') 
     writer = cv2.VideoWriter("vid4_YOLOmanual.avi", fourcc, 30.0, (800,800))
 

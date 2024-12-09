@@ -4,11 +4,9 @@
 See `new_labels.txt` for all classes used in this project. Class indexes to be reordered soon.
 
 ## Tracking
-See `meanshift.py`. 
-
-**TODO**: Implement CAMShift instead. (Can adapt to changing object sizes.)
+See `road_signs_tracking.py`. 
 
 To run: 
 ```
-python meanshift.py <directory to video>
+python road_signs_tracking.py -v <directory to video> -m <directory to model file>
 ```
