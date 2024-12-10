@@ -33,16 +33,3 @@ def preprocess_img(img):
     out = sharpen_image(out)
     out = incr_saturation(out, sat_adj=2)
     return out
-
-# img_folder = "C:/D drive/2024_T7/CV proj/test_uncropped"
-# out_folder = "C:/D drive/2024_T7/CV proj/uncropped_PP"
-# dir_ls= os.listdir(img_folder)
-
-# for item_name in dir_ls:
-#     if '.png' in item_name:
-#         path = img_folder+"/"+item_name
-#         img = cv2.imread(path)
-#         pp_img = preprocess_img(img)
-#         out_path = out_folder+"/"+item_name
-#         cv2.imwrite(out_path, pp_img)
-#         print(f"Saved as {out_path}.")
